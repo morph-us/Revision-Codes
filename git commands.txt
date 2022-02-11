@@ -1,0 +1,27 @@
+git init
+
+git status
+
+git remote add origin <remote_path>
+git remote -v
+
+
+git add . /   git add --all 
+git commit -m "commit message"
+git push --set-upstream origin master /  git push
+
+
+git branch <branch_name>
+git checkout <branch_name> // git checkout -b <branch_name>
+git branch -a
+
+
+git merge <branch_name>
+git diff <branch_name>
+
+
+delete remote :  git push -d <branch_name>
+delete local brancg : git branch -d <branch_name> 
+
+
+
