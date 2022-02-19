@@ -9,12 +9,12 @@ int main(){
 	printf("arr %p \n",arr);
 	printf("*arr %d\n",*arr);
 	printf("&arr %p\n",&arr);
-	printf("*&arr %p\n",*&arr);
+	printf("*&arr %d\n",*&arr);
 	printf("**&arr %d\n",**&arr);
 
 
 
-	printf("arr %ld\n",sizeof(arr));
+	printf("\n\narr %ld\n",sizeof(arr));
 	printf("*arr %ld\n",sizeof(*arr));
 	printf("&arr %ld\n",sizeof(&arr));
 	printf("*&arr %ld\n",sizeof(*&arr));

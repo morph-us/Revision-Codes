@@ -33,7 +33,7 @@ class Test {
 		System.out.println(al);
 
 		ArrayList<Test> k =al.stream().sorted().collect(Collectors.toCollection(ArrayList::new));
-
+		//ArrayList::new is lambda function casted to paremeter of type Supplier<T>
 
 
 		System.out.println(k);
