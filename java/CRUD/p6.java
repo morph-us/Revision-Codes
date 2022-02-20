@@ -12,13 +12,25 @@ class Test{
 
 		Vector<Integer> l2 = new Vector<Integer>(l1);
 
+		Set<Integer> s = new TreeSet<Integer>(l2);
+
+		ArrayList<Integer> l = new ArrayList<Integer>(s);
 
 
-		System.out.println(l2);
+		//M-1 
+		Integer ax[] = l1.toArray(new Integer[0]);
 
-		Integer arr[] = l2.toArray(new Integer[0]);
-	
+		//M0
+		Integer arr[] = l.stream().toArray(Integer[]::new);	
 		System.out.println(Arrays.toString(arr));
+
+		//M1
+		int[] intAr = l.stream().mapToInt(i->i*i).toArray();
+		System.out.println(Arrays.toString(intAr));
+	
+		//M2
+		int[] example2 = l.stream().mapToInt(Integer::intValue).toArray();	
+
 
 
 	}

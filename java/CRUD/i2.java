@@ -6,7 +6,7 @@ class Test{
 	public static void main(String args[]){
 
 
-		int[] arr= {1,3,5,6,99};
+/*		int[] arr= {1,3,5,6,99};
 		Integer[] a = Arrays.stream(arr).map(x->(Integer)x).boxed().toArray(Integer[]::new);
 		System.out.println(Arrays.toString(a));
 
@@ -15,6 +15,20 @@ class Test{
 		//
 		Integer[] b ={1,3,4,5};
 
+		*/
+
+		Integer b = 10;
+		int a = b;
+
+
+		int k =20;
+		Integer m = k;
+
+		
+
+
+		System.out.println(a);
+		System.out.println(b);
 
 
 	}

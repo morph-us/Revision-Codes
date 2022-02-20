@@ -40,6 +40,7 @@ class Test{
 		//Method 2
 		List<Integer> l1 = new ArrayList<Integer>();
 		Collections.addAll(l1,a);
+	//	Collections.addAll(l1,arr);
 
 
 
@@ -49,8 +50,15 @@ class Test{
 		
 		
 		ArrayList<Integer> l2 = Arrays.stream(arr).map(x->(Integer)x).boxed().collect(Collectors.toCollection(ArrayList::new));
-		
-		
+	
+
+		ArrayList<Integer> l3 = Arrays.stream(arr).boxed().collect(Collectors.toCollection(ArrayList::new));
+	//boxed changed int to Integer
+	
+
+		//M4
+		Arrays.stream(arr).forEach(l2::add);
+
 	//	ArrayList<Integer> l2 = Arrays.stream(arr).map(x->(Integer)x).boxed().collect(Collectors.toCollection(new ArrayList()));//error new ArrayList() != ArrayList::new as its a supplier 
 		System.out.println(l2);
 	
