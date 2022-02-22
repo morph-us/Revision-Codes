@@ -1,0 +1,10 @@
+refrence works as alternative name for a variable.
+it is internally a pointer but we do not need to dereference it/
+it helps as we do not need to create another copy of same object while passing it to a function.
+refernce is used in copy constructor.
+it can also be used in for each loop, it saves memory
+
+refernce cannot be updated.
+reference has only single level of indirection.
+it cannot be NULL
+

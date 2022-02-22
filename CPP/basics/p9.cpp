@@ -8,15 +8,18 @@ int main(){
 	cout<<"enter a and b\n";
 	cin>>x>>y;
 
-	cout<<&x<<" "<<&y<<endl;
+	cout<<x<<" "<<y<<endl;
 
 	fun(x,y);
 
+	cout<<x<<" "<<y<<endl;
 }
 
 void fun(int &a,int &b){
+	int temp = a;
+	a = b;
+	b = temp;
 
-	cout<<a<<endl<<endl<<b<<endl;
 
 
 }
