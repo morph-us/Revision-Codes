@@ -1,0 +1,4 @@
+Encapsulation : Encapsulation is defined as wrapping up of data and information under a single unit. 
+				Encapsulation is defined as binding together the data and the functions that manipulates them.
+				Encapsulation also lead to data abstraction or hiding.
+					

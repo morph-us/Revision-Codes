@@ -1,10 +1,47 @@
+References
+
 refrence works as alternative name for a variable.
 it is internally a pointer but we do not need to dereference it/
 it helps as we do not need to create another copy of same object while passing it to a function.
 refernce is used in copy constructor.
 it can also be used in for each loop, it saves memory
-
 refernce cannot be updated.
 reference has only single level of indirection.
 it cannot be NULL
+
+more : https://www.geeksforgeeks.org/references-in-c/
+
+
+
+Inline function
+
+Inline Function are those function whose definitions are small and be substituted at the place where its function call is happened. 
+
+C++ provides an inline functions to reduce the function call overhead. Inline function is a function that is expanded in line when it is called. When the inline function is called whole code of the inline function gets inserted or substituted at the point of inline function call.
+
+inlining is only a request to the compiler, not a command. Compiler can ignore the request for inlining.
+
+used when function is small and memory of program can be increased.
+
+all the functions defined inside the class are implicitly inline.
+
+
+MACRO
+
+A macro is a piece of code in a program that is replaced by the value of the macro.
+types: 
+	1. object :  #define DATE 31
+	2. chain :  #define INSTAGRAM FOLLOWERS
+				#define FOLLOWERS 138
+	3. multiline :	#define ELE 1, \
+            2, \
+            3		
+
+    4. function: #define min(a, b) (((a) < (b)) ? (a) : (b))
+
+    
+
+
+
+
 
