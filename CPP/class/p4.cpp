@@ -33,3 +33,5 @@ int main(){
 
 
 }
+
+//#If we have address of an object , we can acccess even private memebers of the object from memory using pointers. 
