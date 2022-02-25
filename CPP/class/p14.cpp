@@ -31,6 +31,12 @@ class MVC{
 		cout<<" copy constructor ";
 	}
 
+	MVC(MVC obj){
+	
+		cout<<" special constructor ";
+	}
+
+
 
 	void getInfo(){
 		cout<<m<< " "<<v<<" "<<c<<endl; 

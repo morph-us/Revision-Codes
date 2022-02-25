@@ -49,6 +49,8 @@ int main(){
 	MVC obj2(obj1);
 	obj2.getInfo();
 
+	MVC obj3 = obj1;
+	obj3.getInfo();
 
 
 

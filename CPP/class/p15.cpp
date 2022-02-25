@@ -27,9 +27,11 @@ class MVC{
 	}
 
 	MVC(MVC &obj){
-	
+			
 		cout<<" copy constructor ";
+		*this = obj;
 	}
+
 
 
 	void getInfo(){

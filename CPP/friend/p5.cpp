@@ -1,7 +1,19 @@
 #include<iostream>
 using namespace std;
 class B;
-class A;
+
+
+
+class A{
+	int a = 10;
+
+
+	friend class B;
+};
+
+
+
+
 
 class B{
 
@@ -10,19 +22,6 @@ class B{
 	void fun(A &);
 
 };
-
-
-
-
-class A{
-	int a = 10;
-
-
-	friend void B::fun(A&);
-};
-
-
-
 
 
 
