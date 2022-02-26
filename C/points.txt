@@ -1,0 +1,4 @@
+here ar ends with "\0"	
+	char *ar = "hey there";
+
+
