@@ -37,15 +37,25 @@ class Contact{
 
 class Test{
 
-	
+	HashSet<String> visited = new HashSet<String>();
+    LinkedHashMap<String, LinkedHashMap<String,Contact>> adjacent = new LinkedHashMap<String, LinkedHashMap<String,Contact>>();
+  
 
 private  void DFS(Contact mergedContact, String num) {
+        //visited.add(num);
+        // Add the email vector that contains the current component's emails
+        //mergedAccount.add(num);
+
+        //System.out.println("enter"+num + " CHECK "+adjacent.get(num));
+
+       // System.out.println(adjacent);
+
         if (!adjacent.containsKey(num)) {
         	System.out.println("direct return"+num);
             return;
         }
         
-        for (Map.Entry<String,Contact> neighbor : adjacent.get(num).entrySet()) {
+        for (Map.Entry neighbor : adjacent.get(num).entrySet()) {
 
         	String neighborKey = (String)neighbor.getKey();
             if (!visited.contains(neighborKey)) {
@@ -55,7 +65,8 @@ private  void DFS(Contact mergedContact, String num) {
             		mergedContact.dob = old.dob;
             		mergedContact.timestamp = old.timestamp;
             		mergedContact.numbers = new ArrayList<String>();
-            	
+            		mergedContact.numbers.add(num); 
+
             	}
             	else{
             		if(old.timestamp > mergedContact.timestamp){
@@ -80,18 +91,12 @@ private  void DFS(Contact mergedContact, String num) {
 						mergedContact.timestamp = mergedContact.timestamp;
 
 					}
-					
+					if(!mergedContact.numbers.contains(num))
+						mergedContact.numbers.add(num);
+
 
 
             	}
-
-            	if(!mergedContact.numbers.contains(num))
-						mergedContact.numbers.add(num);
-
-				if(!mergedContact.numbers.contains("null") && old.numbers.contains("null"))
-					mergedContact.numbers.add("null");
-
-				Collections.sort(mergedContact.numbers);
 
             	visited.add(num);
             	neighborKey = (String)neighbor.getKey();
@@ -101,40 +106,35 @@ private  void DFS(Contact mergedContact, String num) {
         }
     }
     
-	HashSet<String> visited = new HashSet<String>();
-    TreeMap<String, TreeMap<String,Contact>> adjacent = new TreeMap<String, TreeMap<String,Contact>>();
-  
+
 
 	public static void main(String args[]){
 	
-	String[] l1 = {"123","022","null"};
-	String[] l2 = {"91","null"};
-	String[] l3 = {"123","988"};
-//	String[] l4 = {"333354","22222"};
-//	String[] l5 = {"333333","999999","null","11"};
-
-
-
+	String[] l1 = {"666666","123456","null"};
+	String[] l2 = {"888888","777777","null"};
+	String[] l3 = {"999999","123456","null"};
+	String[] l4 = {"333354","22222"};
+	String[] l5 = {"333333","999999","null","11"};
 
 	ArrayList<String> cl1 = new ArrayList<String>();
 	ArrayList<String> cl2 = new ArrayList<String>();
 	ArrayList<String> cl3 = new ArrayList<String>();
-//	ArrayList<String> cl4 = new ArrayList<String>();
-//	ArrayList<String> cl5 = new ArrayList<String>();
+	ArrayList<String> cl4 = new ArrayList<String>();
+	ArrayList<String> cl5 = new ArrayList<String>();
 
 	Collections.addAll(cl1,l1);
 	Collections.addAll(cl2,l2);
 	Collections.addAll(cl3,l3);
-//	Collections.addAll(cl4,l4);
-//	Collections.addAll(cl5,l5);
+	Collections.addAll(cl4,l4);
+	Collections.addAll(cl5,l5);
 
 
 
 	Contact c1 = new Contact("Amit",null,1,cl1);
 	Contact c2 = new Contact("Ajay","07-05-1992",5,cl2);
 	Contact c3 = new Contact("Atul","06-12-1996",7,cl3);
-//	Contact c4 = new Contact("Akshay",null,6,cl4);
-//	Contact c5 = new Contact("Ankit","01-01-1991",3,cl5);
+	Contact c4 = new Contact("Akshay",null,6,cl4);
+	Contact c5 = new Contact("Ankit","01-01-1991",3,cl5);
 
 
 	ArrayList<Contact> l = new ArrayList<Contact>();
@@ -142,8 +142,8 @@ private  void DFS(Contact mergedContact, String num) {
 	l.add(c1);
 	l.add(c2);
 	l.add(c3);
-//	l.add(c4);
-//	l.add(c5);
+	l.add(c4);
+	l.add(c5);
 
 	for(Contact a:l){
 		System.out.println(a);
@@ -182,14 +182,14 @@ private  void DFS(Contact mergedContact, String num) {
                 String otherNum = l.get(j);
                 
                 if (!adjacent.containsKey(firstNum) && !firstNum.equals("null") ){
-                    adjacent.put(firstNum, new TreeMap<String,Contact>());
+                    adjacent.put(firstNum, new LinkedHashMap<String,Contact>());
                     adjacent.get(firstNum).put(firstNum,c);
                 }
                 if(!otherNum.equals("null") && !firstNum.equals("null"))
                 	adjacent.get(firstNum).put(otherNum,c);
                 
                 if (!adjacent.containsKey(otherNum) && !otherNum.equals("null") ){
-                    adjacent.put(otherNum, new TreeMap<String,Contact>());
+                    adjacent.put(otherNum, new LinkedHashMap<String,Contact>());
                     adjacent.get(otherNum).put(otherNum,c);
                 }
          		if(!firstNum.equals("null") && !otherNum.equals("null"))
@@ -222,9 +222,9 @@ private  void DFS(Contact mergedContact, String num) {
         //System.out.println(adjacent);
 		//System.out.println(adjacent);
 
-        for(Map.Entry<String,TreeMap<String,Contact>> d:adjacent.entrySet()){
+        for(Map.Entry d:adjacent.entrySet()){
         			//System.out.println(" KEY "+ d.getKey());
-        			TreeMap<String,Contact> m = (TreeMap<String,Contact>)d.getValue();
+        			LinkedHashMap<String,Contact> m = (LinkedHashMap<String,Contact>)d.getValue();
         			System.out.println(m);
         			System.out.println("  ");
 
