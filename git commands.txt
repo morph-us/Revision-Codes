@@ -10,6 +10,8 @@ git add . /   git add --all
 git commit -m "commit message"
 git push --set-upstream origin master /  git push
 
+to unset upstream : git branch --unset-upstream
+
 
 git branch <branch_name>
 git checkout <branch_name> // git checkout -b <branch_name>
