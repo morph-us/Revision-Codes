@@ -2,7 +2,8 @@ git init
 
 git status
 
-git remote add origin <remote_path>
+git remote add origin <remote_path>  
+ : origin is URL of remote repository on github
 git remote -v
 
 
@@ -15,7 +16,8 @@ to unset upstream : git branch --unset-upstream
 
 git branch <branch_name>
 git checkout <branch_name> // git checkout -b <branch_name>
-git branch -a
+git branch -a (show all)
+git branch -a -v (show all with their upstreams)
 
 
 git merge <branch_name>
@@ -26,4 +28,32 @@ delete remote :  git push -d <branch_name>
 delete local brancg : git branch -d <branch_name> 
 
 
+//github has renames master branch to main but git by default creates main at local host
+pulling from main to master creates conflicts while pushing
+git push origin master (creates new branch at origin)
+git push origin main(gives error) 
+so rename local repo to main and then push
+
+'''
+git branch -m master main \
+git push -u origin main \
+git remote set-head origin main
+'''
+
+or 
+git push origin HEAD:main works even if you dont have a main branch at local repo . but why ??(maybe it pushes HEAD directly to main in remote)
+
+
+what is HEAD in git ?
+head points to latest commit of current branch
+
+
+    git push origin HEAD
+
+    A handy way to push the current branch to the same name on the remote.
+
+
+
+
+$ ssh-add ~/.ssh/id_rsa_github    # add private github ssh key ssh-agent (assuming you have it already running)
 
