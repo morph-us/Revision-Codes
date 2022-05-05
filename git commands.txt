@@ -7,6 +7,10 @@ git remote add origin <remote_path>
 git remote -v
 
 
+set upstream:
+git branch --set-upstream-to origin/main
+
+
 git add . /   git add --all 
 git commit -m "commit message"
 git push --set-upstream origin master /  git push
@@ -57,3 +61,5 @@ head points to latest commit of current branch
 
 $ ssh-add ~/.ssh/id_rsa_github    # add private github ssh key ssh-agent (assuming you have it already running)
 
+merge unrelated histories
+ git merge --allow-unrelated-histories

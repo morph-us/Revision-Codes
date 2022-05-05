@@ -1,0 +1,36 @@
+DOCKER Postgres Commands
+
+1.Pull postgres container to docker
+$ docker pull postgres:alpine 
+
+2.start a postgres instance
+$ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+3. show conatiners
+$sudo docker ps
+
+4. run bash of postgres cont
+$docker -exec it <con_id> bin/bash
+
+5. enter user of postgres
+bash-5.1# psql -U postgres
+
+5. create user
+	createuser --interactive --pwprompt
+	or
+
+	createuser <name> --pwprompt
+more : https://ubiq.co/database-blog/create-user-postgresql/	
+
+
+6. enter user 
+bash-5.1# psql -U <username>
+bash-5.1# psql -U postgres
+
+
+notes: i created other users with super user permission but still i cannot exec , psql -U harshal, 
+it gives error :
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  database "harshal" does not exist
+
+
+
