@@ -2,9 +2,11 @@ Track 1 :
 1 hour : C,CPP,JAVA,PYTHON REVISION
 1 hour : Apti
 
+
 1 hour : PYTHON,JAVA PRACTICE with leetcode gameplan : basics, Algo , DS 
 
 3 hour : Django project : IPL Dash 
+
 
 
 3 hours: 
