@@ -43,7 +43,7 @@ class GFG extends Test {
 
 		// call the instance method
 		// using double colon operator
-		list.forEach(new GFG()::printm);
+		list.forEach(new GFG()::print);
 	}
 }
 

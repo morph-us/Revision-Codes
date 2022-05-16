@@ -2,7 +2,7 @@ import java.util.function.*;
 
 interface  Demo{
 	
-	abstract  void fun();	
+	abstract void fun();	
 }
 
 
@@ -31,6 +31,7 @@ class Test{
 
 
 		Demo f = Demo1::fun;
+		//Demo k = Demo :: fun;
 
 		Test d = new Test();
 
@@ -39,13 +40,16 @@ class Test{
 
 	void gun(){
 
-	//	Demo d = Demo :: fun;
+//		Demo k = Demo :: fun;
 
-		Demo f = new Demo1()::gun;
+		Demo1 m = new Demo1();
+		Demo f = m::gun;
+
+		f.fun();
 //		new Demo1()::gun; //do not work
 		//new Test() ;//work
 		//
-		Demo1 ::new;
+		//Demo1 ::new; // do not work
 
 	}
 }

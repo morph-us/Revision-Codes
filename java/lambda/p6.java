@@ -10,8 +10,8 @@ class Student implements Comparable<Student>{
 	}
 
 	public int compareTo(Student obj){
-	//	return name.compareTo(obj.name);
-		return roll-obj.roll;
+		return name.compareTo(obj.name);
+	//	return roll-obj.roll;
 	}
 
 
@@ -32,26 +32,33 @@ class Test{
 		TreeMap<Integer,Student> m = new TreeMap<Integer,Student>();
 
 		m.put(100,new Student(1,"Rajesh"));
-		m.put(21,new Student(3,"kamal"));
-		m.put(03,new Student(4,"deepal"));
-		m.put(120,new Student(8,"mohit"));
-		m.put(22,new Student(9,"srivas"));
-		m.put(21,new Student(2,"gopal"));
+		m.put(120,new Student(8,"Mohit"));
+		m.put(22,new Student(9,"Srivas"));
+		m.put(21,new Student(3,"Kamal"));
+		m.put(03,new Student(4,"Deepal"));
+		m.put(21,new Student(2,"Gopal"));
 
 		System.out.println(m);
 		
 		ArrayList<Integer> l = new ArrayList<Integer>(m.keySet());
-		System.out.println(l);
+		System.out.println(l); // order is same as order was in map
 		
 
+		
 
 		ArrayList<Student> l1 = new ArrayList<Student>(m.values());
 		System.out.println(l1);
 			
+
+		Collections.sort(l1);
+		System.out.println(l1);
+
+
 		Collections.sort(l1,(Student p1,Student p2)->{
 				return p1.roll - p2.roll;	
 			
 		});
+
 
 		System.out.println(l1);
 

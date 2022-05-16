@@ -1,5 +1,5 @@
 import java.util.*;
-class Student{
+class Student implements Comparable<Student>{
 	String name;
 	int roll;
 	
@@ -13,6 +13,13 @@ class Student{
 
 		return name +" : "+ roll;
 	}
+
+
+	public int compareTo(Student obj){
+		return this.name.compareTo(obj.name);
+	}
+
+
 
 
 }
@@ -33,7 +40,8 @@ class Test{
 		System.out.println(l.get(2));
 		System.out.println(l.size());
 		
-		Collections.sort(l,new SortByName());
+	//Collections.sort(l,new SortByName());
+		Collections.sort(l);
 		System.out.println(l);
 
 

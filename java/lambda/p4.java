@@ -8,7 +8,8 @@
             int width=10;  
               
             //with lambda  
-            Drawable d2=(n)->{  
+            
+            Drawable d2=()->{  
                 System.out.println("Drawing "+width);  
             };  
             d2.draw();  
