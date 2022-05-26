@@ -1,4 +1,4 @@
-//ways to conveert 
+//ways to convert  onec collection to another
 //
 //
 import java.util.*;

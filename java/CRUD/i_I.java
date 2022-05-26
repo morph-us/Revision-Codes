@@ -7,7 +7,16 @@ class Test{
 
 
 		int[] arr= {1,3,5,6,99};
-		Integer[] a = Arrays.stream(arr).map(x->(Integer)x).boxed().toArray(Integer[]::new);
+		////m1
+		//Integer[] a = Arrays.stream(arr).map(x->(Integer)x).boxed().toArray(Integer[]::new);
+		
+
+		////m2 
+		//Integer[] a = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+		
+		Object[] a = Arrays.stream(arr).boxed().toArray();
+		
+
 		System.out.println(Arrays.toString(a));
 
 

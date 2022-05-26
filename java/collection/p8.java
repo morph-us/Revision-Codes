@@ -49,6 +49,13 @@ class Test{
 		}
 
 
+		System.out.println("using stream");
+
+		m.entrySet().stream().forEach((entry)->{
+			System.out.println(entry.getKey() + " : "+entry.getValue() );
+		});
+
+
 
 
 

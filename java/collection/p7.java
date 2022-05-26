@@ -22,6 +22,9 @@ class Test{
 				System.out.println(it.next());
 		}	
 
+		System.out.println("using stream");
+		l.stream().forEach(System.out::println);
+
 
 
 

@@ -19,13 +19,14 @@ class Test{
 
 
 		Set<Integer> s1 = Arrays.stream(a).boxed().collect(Collectors.toCollection(TreeSet<Integer>::new));
-
 		System.out.println(s1);
 
 
 		//converting set to array
 		int[] b = s1.stream().mapToInt(x->x).toArray();
 		Integer[] c = s1.stream().toArray(Integer[]::new);
+//		Object[] c = s1.stream().toArray();
+
 
 
 		System.out.println(b);

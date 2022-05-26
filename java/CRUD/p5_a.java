@@ -12,16 +12,24 @@ class Test{
 		Vector<Integer> l2 = new Vector<Integer>(l1);
 
 		System.out.println(l2);
-//		Integer arr[] = (Integer[])l2.toArray();
+		
 
+		//int arr[] = l2.toArray(new int[0]); not used for primitive types
+	 
 
-		Integer arr[] = l2.toArray(new Integer[0]);
-
-
-
-
-
+		// //Method 1
+		// Object arr[] = l2.toArray();
+		
+		////Method 1
+		//Integer arr[] = l2.toArray(new Integer[0]);
+		
 		System.out.println(arr);
+		for(Object i:arr){
+			int k = (int)i;
+		
+			System.out.println(k);
+			//System.out.println(new Integer(i));
+		}
 
 
 

@@ -1,3 +1,5 @@
+
+//USING Collection class to add elements
 import java.util.*;
 
 class Test{

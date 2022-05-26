@@ -25,12 +25,22 @@ class Test{
 		System.out.println(Arrays.toString(arr));
 
 		//M1
-		int[] intAr = l.stream().mapToInt(i->i*i).toArray();
-		System.out.println(Arrays.toString(intAr));
+		// int[] intAr = l.stream().mapToInt(i->i).toArray();
+		// System.out.println(Arrays.toString(intAr));
 	
-		//M2
-		int[] example2 = l.stream().mapToInt(Integer::intValue).toArray();	
+		// //M2
+		// int[] example2 = l.stream().mapToInt(Integer::intValue).toArray();	
+		// System.out.println(Arrays.toString(example2));
+	
 
+
+		// //int[] a3 = l.stream().map(Integer::intValue).toArray();	
+
+		//int[] a3 = l.stream().mapToInt(Integer::intValue).toArray();	
+
+
+			System.out.println(Arrays.toString(a3));
+		
 
 
 	}

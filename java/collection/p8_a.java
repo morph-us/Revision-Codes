@@ -44,9 +44,8 @@ class Test{
 
 		for(Map.Entry e: m.entrySet()){
 			System.out.println(e.getKey()+ " : "+e.getValue());
-			
-		
 		}
+		
 
 
 

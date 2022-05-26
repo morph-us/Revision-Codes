@@ -5,11 +5,17 @@ class Test{
 		
 		int[] a = {1,2,3,4,5};
 		int b[] = {2,4,5};
-	//	int c[5] = {4,3,6,7,8};
+
+		//int c[5] = {4,3,6,7,8};
+	
 		int[] d = new int[4];
 	//	int[] e = new int[4]{2,3,5,2};
 
 		int f[] = new int[3];
+
+		for(int i : f){
+			System.out.println(" :"+i );
+		}
 
 		int k[] = {};
 //		k = {1,3};
