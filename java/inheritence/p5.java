@@ -13,7 +13,8 @@ class Y extends X{
 	void fun() {
 		System.out.println("child");
 
-		throw new Exception();
+		throw new Exception(); 
+		//if throw keyword is used , exception must be caught or declared to be thrown 
 	}
 
 }

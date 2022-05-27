@@ -17,6 +17,7 @@ class Y extends X{
 
 	//if parent class declare "throws Exception" then child class may or may not "throws Exception"	
 
+
 }
 
 

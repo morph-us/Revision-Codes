@@ -20,8 +20,10 @@ class Y extends X{
 class Test{
 	public static void main(String args[]){
 		X x = null;// = new Y();
+		Y y = null;
 
 		x.fun();
+		y.fun();
 
 	}
 }
