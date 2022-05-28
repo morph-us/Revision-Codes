@@ -3,9 +3,7 @@ class X{
 		System.out.println("parent");
 
 	}
-
-
-
+	
 }
 
 class Y extends X{
