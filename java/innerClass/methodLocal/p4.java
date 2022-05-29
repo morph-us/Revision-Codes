@@ -4,7 +4,7 @@ class X{
 
 	void fun(){
 		class Y{
-			static int b= 02;
+			//static int b= 02;
 			Y(){
 				System.out.println(a);
 				System.out.println(b);
@@ -19,7 +19,7 @@ class X{
 	static void gun(){
 
 		class Y{
-			final static int a =10;
+			//final static int a =10;
 			Y(){
 			//	System.out.println(a);
 				System.out.println(b);

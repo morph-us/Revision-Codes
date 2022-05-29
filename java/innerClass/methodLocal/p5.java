@@ -8,7 +8,7 @@ class X{
 
 
 	void fun(){
-		public class Z{
+		private class Z{
 
 
 

@@ -2,10 +2,11 @@ class Water{
 	 int b  = 30;
 	class Fish{
 
-		 int b = 20;
+		 final int b = 20;
 
 
 		void fun(){
+			int b = 31;
 			System.out.println("fun");
 			System.out.println(b);
 			System.out.println(this.b);

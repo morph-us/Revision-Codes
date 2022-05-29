@@ -1,10 +1,21 @@
 class Water{
 	static{
-		System.out.println(new Water());
-		System.out.println(this);
+	//	Fish f = new Fish();
+	//	f.catchFish();
 
+		System.out.println("static block");
+		//System.out.println(this);
 
+	}
 
+	{
+
+		Fish f = new Fish();
+		f.catchFish();
+
+		System.out.println("instance block");
+		
+		
 	}
 
 
@@ -24,6 +35,8 @@ class Water{
 
 //			System.out.println(this);
 //			Water w = new Water();
+
+			new Water();
 
 
 
