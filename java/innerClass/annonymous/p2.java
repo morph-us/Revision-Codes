@@ -8,7 +8,7 @@ class X{
 class Test{
 	public static void main(String args[]){
 		X x = new X(){
-			 void m2(){
+			static void m2(){
 				System.out.println("in m2");
 			}
 			

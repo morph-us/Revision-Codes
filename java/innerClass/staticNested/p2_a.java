@@ -3,17 +3,17 @@ class X{
 	int b = 20;
 	static class Y{
 
-		static int a = 10;
-		int b = 20;
 		void fun(){
 			System.out.println("fun");
 			System.out.println(a);
-			//System.out.println(b);
-
+			System.out.println(b); // only static members of outer class can be accessed from inner class
+ 
 		}
 
 		static void gun(){
-			System.out.println(b);
+
+		
+			System.out.println(a);
 
 		}	
 	}
